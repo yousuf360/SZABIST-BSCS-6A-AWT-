@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2016 11:55:45 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="Teacher" table="teacher" catalog="sch2k16" optimistic-lock="version">
+        <id name="teacherid" type="int">
+            <column name="teacherid" />
+            <generator class="assigned" />
+        </id>
+        <property name="teachername" type="string">
+            <column name="teachername" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

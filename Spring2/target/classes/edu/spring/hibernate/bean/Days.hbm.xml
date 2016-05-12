@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2016 11:55:45 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="Days" table="days" catalog="sch2k16" optimistic-lock="version">
+        <id name="dayid" type="int">
+            <column name="dayid" />
+            <generator class="assigned" />
+        </id>
+        <property name="dayname" type="string">
+            <column name="dayname" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

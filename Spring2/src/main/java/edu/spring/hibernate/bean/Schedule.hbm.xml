@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2016 11:55:45 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="Schedule" table="schedule" catalog="sch2k16" optimistic-lock="version">
+        <id name="schid" type="java.lang.Integer">
+            <column name="schid" />
+            <generator class="identity" />
+        </id>
+        <property name="offid" type="java.lang.Integer">
+            <column name="offid" />
+        </property>
+        <property name="slotid" type="java.lang.Integer">
+            <column name="slotid" />
+        </property>
+        <property name="occupied" type="java.lang.Integer">
+            <column name="occupied" />
+        </property>
+    </class>
+</hibernate-mapping>

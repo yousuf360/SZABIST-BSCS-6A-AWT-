@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2016 11:55:45 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="Vschedule" table="vschedule" catalog="sch2k16" optimistic-lock="version">
+        <composite-id name="id" class="VscheduleId">
+            <key-property name="schid" type="int">
+                <column name="schid" />
+            </key-property>
+            <key-property name="offid" type="java.lang.Integer">
+                <column name="offid" />
+            </key-property>
+            <key-property name="slotid" type="java.lang.Integer">
+                <column name="slotid" />
+            </key-property>
+            <key-property name="courseid" type="java.lang.Integer">
+                <column name="courseid" />
+            </key-property>
+            <key-property name="teacherid" type="java.lang.Integer">
+                <column name="teacherid" />
+            </key-property>
+            <key-property name="occupied" type="java.lang.Integer">
+                <column name="occupied" />
+            </key-property>
+            <key-property name="code" type="string">
+                <column name="code" length="15" />
+            </key-property>
+            <key-property name="title" type="string">
+                <column name="title" length="100" />
+            </key-property>
+            <key-property name="teachername" type="string">
+                <column name="teachername" length="50" />
+            </key-property>
+            <key-property name="dayid" type="int">
+                <column name="dayid" />
+            </key-property>
+            <key-property name="slottypeid" type="int">
+                <column name="slottypeid" />
+            </key-property>
+            <key-property name="roomid" type="int">
+                <column name="roomid" />
+            </key-property>
+            <key-property name="duration" type="string">
+                <column name="duration" length="50" />
+            </key-property>
+            <key-property name="slotno" type="java.lang.Integer">
+                <column name="slotno" />
+            </key-property>
+            <key-property name="subslotid" type="int">
+                <column name="subslotid" />
+            </key-property>
+            <key-property name="dayname" type="string">
+                <column name="dayname" length="20" />
+            </key-property>
+            <key-property name="roomno" type="string">
+                <column name="roomno" length="20" />
+            </key-property>
+            <key-property name="campus" type="string">
+                <column name="campus" length="20" />
+            </key-property>
+            <key-property name="sectionname" type="string">
+                <column name="sectionname" length="25" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
