@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2016 9:02:46 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="Slottype" table="slottype" catalog="sch2k16" optimistic-lock="version">
+        <id name="slottypeid" type="int">
+            <column name="slottypeid" />
+            <generator class="assigned" />
+        </id>
+        <property name="duration" type="string">
+            <column name="duration" length="50" />
+        </property>
+        <property name="slotno" type="java.lang.Integer">
+            <column name="slotno" />
+        </property>
+        <property name="slottype" type="java.lang.Integer">
+            <column name="slottype" />
+        </property>
+        <property name="subslot" type="java.lang.Integer">
+            <column name="subslot" />
+        </property>
+    </class>
+</hibernate-mapping>

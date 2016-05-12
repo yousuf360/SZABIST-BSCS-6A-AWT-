@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2016 9:02:46 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="Vslottype" table="vslottype" catalog="sch2k16" optimistic-lock="version">
+        <composite-id name="id" class="VslottypeId">
+            <key-property name="slottypeid" type="int">
+                <column name="slottypeid" />
+            </key-property>
+            <key-property name="duration" type="string">
+                <column name="duration" length="50" />
+            </key-property>
+            <key-property name="slotno" type="java.lang.Integer">
+                <column name="slotno" />
+            </key-property>
+            <key-property name="sort" type="big_decimal">
+                <column name="sort" precision="12" scale="1" />
+            </key-property>
+            <key-property name="subslotid" type="int">
+                <column name="subslotid" />
+            </key-property>
+            <key-property name="occupied" type="java.lang.Long">
+                <column name="occupied" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
