@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2016 9:02:46 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="Slots" table="slots" catalog="sch2k16" optimistic-lock="version">
+        <id name="slotid" type="java.lang.Integer">
+            <column name="slotid" />
+            <generator class="identity" />
+        </id>
+        <property name="dayid" type="int">
+            <column name="dayid" not-null="true" />
+        </property>
+        <property name="slottypeid" type="int">
+            <column name="slottypeid" not-null="true" />
+        </property>
+        <property name="roomid" type="int">
+            <column name="roomid" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
