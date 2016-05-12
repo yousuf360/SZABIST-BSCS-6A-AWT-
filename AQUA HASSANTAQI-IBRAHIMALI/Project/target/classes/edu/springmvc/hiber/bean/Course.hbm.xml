@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2016 9:02:46 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="Course" table="course" catalog="sch2k16" optimistic-lock="version">
+        <composite-id name="id" class="CourseId">
+            <key-property name="courseid" type="int">
+                <column name="courseid" />
+            </key-property>
+            <key-property name="code" type="string">
+                <column name="code" length="15" />
+            </key-property>
+            <key-property name="title" type="string">
+                <column name="title" length="100" />
+            </key-property>
+            <key-property name="hours" type="string">
+                <column name="hours" length="10" />
+            </key-property>
+            <key-property name="abbrev" type="string">
+                <column name="abbrev" length="15" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
