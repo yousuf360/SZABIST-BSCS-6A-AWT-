@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.beans.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -80,7 +81,7 @@ public class Slots implements java.io.Serializable {
 	public void setRoomid(int roomid) {
 		this.roomid = roomid;
 	}
-
+@Transient
 	public List<Schedule> getSchedule() {
 		return schedule;
 	}

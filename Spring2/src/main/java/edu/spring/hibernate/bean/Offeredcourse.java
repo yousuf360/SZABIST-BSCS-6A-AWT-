@@ -1,5 +1,6 @@
 package edu.spring.hibernate.bean;
 
+import java.beans.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -23,11 +26,12 @@ public class Offeredcourse implements java.io.Serializable {
 	@Id
 	@Column(name = "offid", unique = true, nullable = false)
 	private int offid;
-	@Column(name = "courseid")
-	private Integer courseid;
-	@Column(name = "teacherid")
-	private Integer teacherid;
-	
+	@ManyToOne
+	@JoinColumn(name="courseid")
+	Course course;
+	@ManyToOne
+	@JoinColumn(name="teacherid")
+	Teacher teacher;
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="fk.offeredcourse")
 	private List<Schedule> schedule = new ArrayList<Schedule>();
 	
@@ -40,8 +44,7 @@ public class Offeredcourse implements java.io.Serializable {
 
 	public Offeredcourse(int offid, Integer courseid, Integer teacherid) {
 		this.offid = offid;
-		this.courseid = courseid;
-		this.teacherid = teacherid;
+	
 	}
 
 	public int getOffid() {
@@ -52,28 +55,31 @@ public class Offeredcourse implements java.io.Serializable {
 		this.offid = offid;
 	}
 
-	public Integer getCourseid() {
-		return this.courseid;
-	}
 
-	public void setCourseid(Integer courseid) {
-		this.courseid = courseid;
-	}
 
-	public Integer getTeacherid() {
-		return this.teacherid;
-	}
-
-	public void setTeacherid(Integer teacherid) {
-		this.teacherid = teacherid;
-	}
-
+@Transient
 	public List<Schedule> getSchedule() {
 		return schedule;
 	}
 
 	public void setSchedule(List<Schedule> schedule) {
 		this.schedule = schedule;
+	}
+
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+
+	public Teacher getTeacher() {
+		return teacher;
+	}
+
+	public void setTeacher(Teacher teacher) {
+		this.teacher = teacher;
 	}
 
 }

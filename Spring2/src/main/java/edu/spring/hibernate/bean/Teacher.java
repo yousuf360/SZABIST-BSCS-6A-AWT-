@@ -1,9 +1,18 @@
-package edu.spring.hibernate.bean;// default package
-// Generated May 11, 2016 11:55:44 PM by Hibernate Tools 4.3.1.Final
+package edu.spring.hibernate.bean;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+
+// default package
+// Generated May 11, 2016 7:42:13 PM by Hibernate Tools 4.3.1.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -13,9 +22,14 @@ import javax.persistence.Table;
 @Table(name = "teacher", catalog = "sch2k16")
 public class Teacher implements java.io.Serializable {
 
+	@Id
+	@Column(name = "teacherid", unique = true, nullable = false)
 	private int teacherid;
+	@Column(name = "teachername", length = 50)
 	private String teachername;
-
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="teacherid")
+	List<Offeredcourse> offCourse = new ArrayList<Offeredcourse>();
 	public Teacher() {
 	}
 
@@ -27,10 +41,6 @@ public class Teacher implements java.io.Serializable {
 		this.teacherid = teacherid;
 		this.teachername = teachername;
 	}
-
-	@Id
-
-	@Column(name = "teacherid", unique = true, nullable = false)
 	public int getTeacherid() {
 		return this.teacherid;
 	}
@@ -39,7 +49,6 @@ public class Teacher implements java.io.Serializable {
 		this.teacherid = teacherid;
 	}
 
-	@Column(name = "teachername", length = 50)
 	public String getTeachername() {
 		return this.teachername;
 	}

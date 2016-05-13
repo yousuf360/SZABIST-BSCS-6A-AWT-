@@ -9,8 +9,8 @@ import edu.spring.hibernate.bean.Room;
 public class RoomService extends BaseService
 {
 	@SuppressWarnings("unchecked")
-	public List<Room> ListAllRoom(){
-		return getSession().createQuery("from Room").list();
+	public List<Room> getRooms(int dayid,int slottype){
+		return getSession().createQuery("from Room where roomid IN ").list();
 		
 	}
 	

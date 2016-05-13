@@ -1,5 +1,7 @@
-package edu.spring.hibernate.bean;// default package
-// Generated May 11, 2016 11:55:44 PM by Hibernate Tools 4.3.1.Final
+package edu.spring.hibernate.bean;
+
+// default package
+// Generated May 11, 2016 7:42:13 PM by Hibernate Tools 4.3.1.Final
 
 import java.math.BigDecimal;
 import javax.persistence.Column;

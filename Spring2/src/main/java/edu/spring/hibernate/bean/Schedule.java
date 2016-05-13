@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 import static javax.persistence.GenerationType.IDENTITY;
 
 import javax.persistence.AssociationOverride;
@@ -28,7 +30,7 @@ public class Schedule implements java.io.Serializable {
 	@EmbeddedId
 	ScheduleFk fk =  new ScheduleFk();
 	
-	
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "schid")
 	private Integer schid;
 	@Column(name = "occupied")
